@@ -266,7 +266,7 @@ function buildTransitionProps(
   props: Props,
   state: State
 ): NavigationTransitionProps {
-  const { navigation } = props;
+  const { navigation, screenProps } = props;
 
   const { layout, position, progress, scenes } = state;
 
@@ -282,6 +282,7 @@ function buildTransitionProps(
     scenes,
     scene,
     index: scene.index,
+    screenProps,
   };
 }
 

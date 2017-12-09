@@ -50,6 +50,7 @@ class CardStackTransitioner extends React.Component<Props> {
         configureTransition={this._configureTransition}
         navigation={this.props.navigation}
         render={this._render}
+        screenProps={this.props.screenProps}
         onTransitionStart={this.props.onTransitionStart}
         onTransitionEnd={this.props.onTransitionEnd}
       />
@@ -95,13 +96,13 @@ class CardStackTransitioner extends React.Component<Props> {
     } = this.props;
     return (
       <CardStack
-        screenProps={screenProps}
+        {...props}
         headerMode={headerMode}
         mode={mode}
         router={router}
         cardStyle={cardStyle}
         transitionConfig={transitionConfig}
-        {...props}
+        screenProps={screenProps}
       />
     );
   };
